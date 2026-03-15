@@ -9,5 +9,5 @@ def build_gru_lang_binary(text_vec_layer, vocab_size, embed_dim=128, gru_units=1
         GRU(units=gru_units),
         Dense(units=1, activation="sigmoid")                        # 1 (positive) or 0 (negative)
     ])
-    model.compile(loss="binary_crossentropy", optimizer="nadam", metrics="accuracy")
+    model.compile(loss="binary_crossentropy", optimizer="nadam", metrics=["accuracy"])
     return model
