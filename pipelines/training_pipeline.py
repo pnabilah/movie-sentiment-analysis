@@ -6,7 +6,7 @@ from movie_sentiment_analysis.utils.visualization import plot_loss_history, plot
 
 def training_pipeline():
     with open("config.yaml", "r") as f:
-        config = yaml.safeload(f)
+        config = yaml.safe_load(f)
     # Load preprocessed dataset
     train_set, val_set, test_set, n_tokens, text_vec_layer = preprocess(dataset_path=config["dataset"]["raw_path"])
     # Create model
