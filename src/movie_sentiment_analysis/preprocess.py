@@ -51,4 +51,4 @@ def preprocess(dataset_path="data/raw/aclImdb"):
     return train_set, val_set, test_set, max_tokens, text_vectorization
 
 if __name__ == "__main__":
-    print("Hello World")
+    train_set, val_set, test_set, max_tokens, text_vectorization = preprocess(dataset_path="data/raw/aclImdb")
