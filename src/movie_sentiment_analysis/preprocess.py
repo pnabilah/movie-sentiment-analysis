@@ -46,8 +46,7 @@ def preprocess(dataset_path="data/raw/aclImdb"):
     # Encoding
     max_tokens = 1000
     sample = train_set.map(lambda review, label: review)        # only extract review
-    text_vectorization = tf.keras.layers.TextVectorization(max_tokens=max_tokens,
-                                                           output_mode="tf_idf")
+    text_vectorization = tf.keras.layers.TextVectorization(max_tokens=max_tokens)
     text_vectorization.adapt(sample)
     return train_set, val_set, test_set, max_tokens, text_vectorization
 
