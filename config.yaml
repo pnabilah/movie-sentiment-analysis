@@ -1,0 +1,17 @@
+dataset:
+  raw_path: "data/raw/aclImdb"
+
+model:
+  embed_dim: 128
+  gru_units: 128
+  max_tokens: 1000
+
+training:
+  epochs: 10
+
+paths:
+  best_model_path: "models/model1/best_val_model.keras"
+  final_model_path: "models/model1/final_epoch_model.keras"
+  history_path: "models/model1/training_history.json"
+  loss_curve_path: "results/model1/loss_curve.png"
+  accuracy_curve_path: "results/model1/accuracy_curve.png"
